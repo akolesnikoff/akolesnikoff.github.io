@@ -14,4 +14,4 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a machine learning researchers with expierence in computer vision and natural language processing.
+I am a machine learning researcher, specializing in computer vision and natural language processing.
