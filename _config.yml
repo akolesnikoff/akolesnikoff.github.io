@@ -35,7 +35,7 @@ repo_theme_dark: dark           # https://github.com/anuraghazra/github-readme-s
 # Layout
 # -----------------------------------------------------------------------------
 
-navbar_fixed: true
+navbar_fixed: false
 footer_fixed: true
 
 # Dimensions
@@ -67,7 +67,7 @@ whatsapp_number: # your WhatsApp number (full phone number in international form
 orcid_id: # your ORCID ID
 medium_username: # your Medium username
 quora_username: # your Quora username
-publons_id: # your ID on Publons
+publons_id: # your ID on Publoecs
 research_gate_profile: # your profile on ResearchGate
 blogger_url: # your blogger URL
 work_url: # work page URL
