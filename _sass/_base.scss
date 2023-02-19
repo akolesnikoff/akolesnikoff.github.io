@@ -494,9 +494,9 @@ footer.sticky-bottom {
     li {
       margin-bottom: 1rem;
       .preview {
-        width: 20%;
-        min-width: 20px;
-        max-width: 50px;
+        width: 100%;
+        min-width: 40px;
+        max-width: 200px;
       }
       .abbr {
         height: 2rem;
