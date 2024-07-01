@@ -21,3 +21,5 @@ Along the way, inventing new architectures: [BiT](https://arxiv.org/abs/1912.113
 I also enjoy writing flexible and performant research infrastructure. Open-sourcing the research infra I write is even more fun: [big_vision](https://github.com/google-research/big_vision).
 
 Previously, I did my PhD at [ISTA](https://ist.ac.at/en/home/) under the supervision of [Christoph Lampert](https://cvml.ista.ac.at/), where I was working on weakly-supervised learning and generative image models.
+
+Contact me at `a@akolesnikov.ch`.
