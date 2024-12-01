@@ -5,47 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Research Scientist</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Your Name</h1>
-        <p>Research Scientist specializing in [Your Field]</p>
-        <nav>
-            <a href="#research">Research</a> |
-            <a href="#projects">Projects</a> |
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2 class="nav-logo">Your Name</h2>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#research">Research</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Hi, I'm [Your Name]</h1>
+            <p>Research Scientist specializing in [Your Area]</p>
+        </div>
+    </section>
 
     <!-- Research Section -->
-    <section id="research">
+    <section id="research" class="content-section">
         <h2>Research & Publications</h2>
-        <ul>
-            <li><a href="link-to-paper-1.pdf" target="_blank">Title of Paper 1</a> - Journal Name (Year)</li>
-            <li><a href="link-to-paper-2.pdf" target="_blank">Title of Paper 2</a> - Journal Name (Year)</li>
-            <!-- Add more as needed -->
-        </ul>
+        <div class="card-container">
+            <div class="card">
+                <h3>Title of Paper 1</h3>
+                <p><a href="link-to-paper-1.pdf" target="_blank">Journal Name (Year)</a></p>
+            </div>
+            <div class="card">
+                <h3>Title of Paper 2</h3>
+                <p><a href="link-to-paper-2.pdf" target="_blank">Journal Name (Year)</a></p>
+            </div>
+        </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="content-section">
         <h2>Projects</h2>
-        <ul>
-            <li><strong>Project Name 1:</strong> Brief description of the project.</li>
-            <li><strong>Project Name 2:</strong> Brief description of the project.</li>
-            <!-- Add more as needed -->
-        </ul>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
-        </p>
-    </section>
-</body>
-</html>
+        <div class="card-container">
+            <div class="card">
+                <h3>Project Name 1</h3>
