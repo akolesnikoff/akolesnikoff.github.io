@@ -46,6 +46,16 @@
             color: #666;
         }
     </style>
+    <script>
+        function toggleCitation(id) {
+            const citationElement = document.getElementById(id);
+            if (citationElement.style.display === "none" || citationElement.style.display === "") {
+                citationElement.style.display = "block";
+            } else {
+                citationElement.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
