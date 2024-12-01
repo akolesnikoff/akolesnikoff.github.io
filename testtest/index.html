@@ -1,74 +1,395 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Research Scientist</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Bibliography</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .entry {
+            margin-bottom: 20px;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .author, .year, .journal, .links {
+            margin-top: 5px;
+            color: #555;
+        }
+        .links a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #0066cc;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <h2 class="nav-logo">Your Name</h2>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#research">Research</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
+    <h1>Bibliography</h1>
+    
+    <div class="entry">
+        <div class="title">A Study of Autoregressive Decoders for Multi-Tasking in Computer Vision</div>
+        <div class="author">Authors: Beyer, Lucas and Wan, Bo and Madan, Gagan and Pavetic, Filip and Steiner, Andreas and Kolesnikov, Alexander and Pinto, Andr'e Susano and Bugliarello, Emanuele and Wang, Xiao and Yu, Qihang and Chen, Liang-Chieh and Zhai, Xiaa</div>
+        <div class="year">Year: 2023</div>
+        <div class="journal">Journal: arXiv preprint arXiv:2303.17376</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/2303.17376" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/2303.17376.pdf" target="_blank">PDF</a>
+            <a href="https://github.com/google-research/big_vision" target="_blank">Code</a>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h1>I'm <span>Your Name</span></h1>
-            <p>Pushing the boundaries of [Your Area of Expertise]</p>
-            <a href="#contact" class="hero-btn">Get in Touch</a>
+    </div>
+    
+    <div class="entry">
+        <div class="title">Sigmoid Loss for Language Image Pre-Training</div>
+        <div class="author">Authors: Zhai, Xiaohua and Mustafa, Basil and Kolesnikov, Alexander and Beyer, Lucas</div>
+        <div class="year">Year: 2023</div>
+        <div class="journal">Journal: arXiv preprint arXiv:2303.15343</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/2303.15343" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/2303.15343.pdf" target="_blank">PDF</a>
+            <a href="https://github.com/google-research/big_vision" target="_blank">Code</a>
         </div>
-    </section>
-
-    <!-- Research Section -->
-    <section id="research" class="content-section">
-        <h2>Research & Publications</h2>
-        <div class="card-container">
-            <div class="card">
-                <h3>Title of Paper 1</h3>
-                <p><a href="link-to-paper-1.pdf" target="_blank">Journal Name (Year)</a></p>
-            </div>
-            <div class="card">
-                <h3>Title of Paper 2</h3>
-                <p><a href="link-to-paper-2.pdf" target="_blank">Journal Name (Year)</a></p>
-            </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">Scaling vision transformers to 22 billion parameters</div>
+        <div class="author">Authors: Dehghani, Mostafa and Djolonga, Josip and Mustafa, Basil and Padlewski, Piotr and Heek, Jonathan and Gilmer, Justin and Steiner, Andreas and Caron, Mathilde and Geirhos, Robert and Alabdulmohsin, Ibrahim and Jenatton, Rodolphe and Beyer, Lucas and Tschannen, Michael and Arnab, Anurag and Wang, Xiao and Riquelme, Carlos and Minderer, Matthias and Puigcerver, Joan and Evci, Utku and Kumar, Manoj and Steenkiste, Sjoerd van and Elsayed, Gamaleldin F. and Mahendran, Aravindh and Yu, Fisher and Oliver, Avital and Huot, Fantine and Bastings, Jasmijn and Collier, Mark Patrick and Gritsenko, Alexey and Birodkar, Vighnesh and Vasconcelos, Cristina and Tay, Yi and Mensink, Thomas and Kolesnikov, Alexander and Pavetić, Filip and Tran, Dustin and Kipf, Thomas and Lučić, Mario and Zhai, Xiaohua and Keysers, Daniel and Harmsen, Jeremiah and Houlsby, Neil</div>
+        <div class="year">Year: 2023</div>
+        <div class="journal">Journal: arXiv preprint arXiv:2302.05442</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/2302.05442" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/2302.05442.pdf" target="_blank">PDF</a>
+            
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="content-section-alt">
-        <h2>Projects</h2>
-        <div class="card-container">
-            <div class="card">
-                <h3>Project Name 1</h3>
-                <p>A brief description of the project. Utilizing cutting-edge technologies.</p>
-            </div>
-            <div class="card">
-                <h3>Project Name 2</h3>
-                <p>Exploring new approaches in [Your Field].</p>
-            </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">Tuning computer vision models with task rewards</div>
+        <div class="author">Authors: Pinto, Andr'e Susano and Kolesnikov, Alexander and Shi, Yuge and Beyer, Lucas and Zhai, Xiaohua</div>
+        <div class="year">Year: 2022</div>
+        <div class="journal">Journal: arXiv preprint arXiv:2302.08242</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/2302.08242" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/2302.08242.pdf" target="_blank">PDF</a>
+            <a href="https://github.com/google-research/big_vision" target="_blank">Code</a>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2>Contact Me</h2>
-        <p>I'd love to hear from you! Let's connect.</p>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <div class="social-links">
-            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> 
-            <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
+    </div>
+    
+    <div class="entry">
+        <div class="title">FlexiViT: One Model for All Patch Sizes</div>
+        <div class="author">Authors: Beyer, Lucas and Izmailov, Pavel and Kolesnikov, Alexander and Caron, Mathilde and Kornblith, Simon and Zhai, Xiaohua and Minderer, Matthias and Tschannen, Michael and Alabdulmohsin, Ibrahim and Pavetic, Filip</div>
+        <div class="year">Year: 2022</div>
+        <div class="journal">Journal: Conference on Computer Vision and Pattern Recognition (CVPR)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/2212.08013" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/2212.08013.pdf" target="_blank">PDF</a>
+            <a href="https://github.com/google-research/big_vision" target="_blank">Code</a>
         </div>
-    </section>
+    </div>
+    
+    <div class="entry">
+        <div class="title">PaLI: A Jointly-Scaled Multilingual Language-Image Model</div>
+        <div class="author">Authors: Chen, Xi and Wang, Xiao and Changpinyo, Soravit and Piergiovanni, AJ and Padlewski, Piotr and Salz, Daniel and Goodman, Sebastian and Grycner, Adam and Mustafa, Basil and Beyer, Lucas and Kolesnikov, Alexander and Puigcerver, Joan and Ding, Nan and Rong, Keran and Akbari, Hassan and Mishra, Gaurav and Xue, Linting and Thapliyal, Ashish and Bradbury, James and Kuo, Weicheng and Seyedhosseini, Mojtaba and Jia, Chao and Ayan, Burcu Karagol and Riquelme, Carlos and Steiner, Andreas and Angelova, Anelia and Zhai, Xiaohua and Houlsby, Neil and Soricut, Radu</div>
+        <div class="year">Year: 2022</div>
+        <div class="journal">Journal: International Conference on Representation Learning (ICLR)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/2209.06794" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/2209.06794.pdf" target="_blank">PDF</a>
+            
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">UViM: A unified modeling approach for vision with learned guiding codes</div>
+        <div class="author">Authors: Kolesnikov, Alexander and Susano Pinto, Andr'e and Beyer, Lucas and Zhai, Xiaohua and Harmsen, Jeremiah and Houlsby, Neil</div>
+        <div class="year">Year: 2022</div>
+        <div class="journal">Journal: Advances in neural information processing systems (NeurIPS)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/2205.10337" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/2205.10337.pdf" target="_blank">PDF</a>
+            <a href="https://github.com/google-research/big_vision" target="_blank">Code</a>
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">Better plain ViT baselines for ImageNet-1k</div>
+        <div class="author">Authors: Beyer, Lucas and Zhai, Xiaohua and Kolesnikov, Alexander</div>
+        <div class="year">Year: 2022</div>
+        <div class="journal">Journal: arXiv preprint arXiv:2205.01580</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/2205.01580" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/2205.01580.pdf" target="_blank">PDF</a>
+            <a href="https://github.com/google-research/big_vision" target="_blank">Code</a>
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">Scaling vision transformers</div>
+        <div class="author">Authors: Zhai, Xiaohua and Kolesnikov, Alexander and Houlsby, Neil and Beyer, Lucas</div>
+        <div class="year">Year: 2022</div>
+        <div class="journal">Journal: Conference on Computer Vision and Pattern Recognition (CVPR)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/2106.04560" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/2106.04560.pdf" target="_blank">PDF</a>
+            <a href="https://github.com/google-research/big_vision" target="_blank">Code</a>
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">Knowledge distillation: A good teacher is patient and consistent</div>
+        <div class="author">Authors: Beyer, Lucas and Zhai, Xiaohua and Royer, Am'elie and Markeeva, Larisa and Anil, Rohan and Kolesnikov, Alexander</div>
+        <div class="year">Year: 2022</div>
+        <div class="journal">Journal: Conference on Computer Vision and Pattern Recognition (CVPR)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/2106.05237" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/2106.05237.pdf" target="_blank">PDF</a>
+            <a href="https://github.com/google-research/big_vision" target="_blank">Code</a>
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">LiT: Zero-shot transfer with locked-image text tuning</div>
+        <div class="author">Authors: Zhai, Xiaohua and Wang, Xiao and Mustafa, Basil and Steiner, Andreas and Keysers, Daniel and Kolesnikov, Alexander and Beyer, Lucas</div>
+        <div class="year">Year: 2022</div>
+        <div class="journal">Journal: Conference on Computer Vision and Pattern Recognition (CVPR)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/2111.07991" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/2111.07991.pdf" target="_blank">PDF</a>
+            <a href="https://github.com/google-research/big_vision" target="_blank">Code</a>
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">How to train your ViT? data, augmentation, and regularization in vision transformers</div>
+        <div class="author">Authors: Steiner, Andreas and Kolesnikov, Alexander and Zhai, Xiaohua and Wightman, Ross and Uszkoreit, Jakob and Beyer, Lucas</div>
+        <div class="year">Year: 2021</div>
+        <div class="journal">Journal: Transactions on Machine Learning Research (TMLR)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/2106.10270" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/2106.10270.pdf" target="_blank">PDF</a>
+            <a href="https://github.com/google-research/vision_transformer" target="_blank">Code</a>
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">MLP-Mixer: An all-mlp architecture for vision</div>
+        <div class="author">Authors: Tolstikhin, Ilya O and Houlsby, Neil and Kolesnikov, Alexander and Beyer, Lucas and Zhai, Xiaohua and Unterthiner, Thomas and Yung, Jessica and Steiner, Andreas and Keysers, Daniel and Uszkoreit, Jakob and others</div>
+        <div class="year">Year: 2021</div>
+        <div class="journal">Journal: Advances in neural information processing systems (NeurIPS)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/2105.01601" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/2105.01601.pdf" target="_blank">PDF</a>
+            <a href="https://github.com/google-research/vision_transformer" target="_blank">Code</a>
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">An image is worth 16x16 words: Transformers for image recognition at scale</div>
+        <div class="author">Authors: Dosovitskiy, Alexey and Beyer, Lucas and Kolesnikov, Alexander and Weissenborn, Dirk and Zhai, Xiaohua and Unterthiner, Thomas and Dehghani, Mostafa and Minderer, Matthias and Heigold, Georg and Gelly, Sylvain and others</div>
+        <div class="year">Year: 2020</div>
+        <div class="journal">Journal: International Conference on Representation Learning (ICLR)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/2010.11929" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/2010.11929.pdf" target="_blank">PDF</a>
+            <a href="https://github.com/google-research/vision_transformer" target="_blank">Code</a>
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">Big transfer (BiT): General visual representation learning</div>
+        <div class="author">Authors: Kolesnikov, Alexander and Beyer, Lucas and Zhai, Xiaohua and Puigcerver, Joan and Yung, Jessica and Gelly, Sylvain and Houlsby, Neil</div>
+        <div class="year">Year: 2020</div>
+        <div class="journal">Journal: European Conference on Computer Vision (ECCV)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/1912.11370" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/1912.11370.pdf" target="_blank">PDF</a>
+            <a href="https://github.com/google-research/big_transfer" target="_blank">Code</a>
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">On Robustness and Transferability of Convolutional Neural Networks</div>
+        <div class="author">Authors: Djolonga, Josip and Yung, Jessica and Tschannen, Michael and Romijnders, Rob and Beyer, Lucas and Kolesnikov, Alexander and Puigcerver, Joan and Minderer, Matthias and D'Amour, Alexander and Moldovan, Dan and Gelly, Sylvain and Houlsby, Neil and Zhai, Xiaohua and Lucic, Mario</div>
+        <div class="year">Year: 2021</div>
+        <div class="journal">Journal: Conference on Computer Vision and Pattern Recognition (CVPR)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/2007.08558" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/2007.08558.pdf" target="_blank">PDF</a>
+            
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">Are we done with imagenet?</div>
+        <div class="author">Authors: Beyer, Lucas and H'enaff, Olivier J and Kolesnikov, Alexander and Zhai, Xiaohua and Oord, A"aron van den</div>
+        <div class="year">Year: 2020</div>
+        <div class="journal">Journal: arXiv preprint arXiv:2006.07159</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/2006.07159" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/2006.07159.pdf" target="_blank">PDF</a>
+            <a href="https://github.com/google-research/reassessed-imagenet" target="_blank">Code</a>
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">A Large-scale Study of Representation Learning with the Visual Task Adaptation Benchmark</div>
+        <div class="author">Authors: Zhai, Xiaohua and Puigcerver, Joan and Kolesnikov, Alexander and Ruyssen, Pierre and Riquelme, Carlos and Lucic, Mario and Djolonga, Josip and Pinto, Andre Susano and Neumann, Maxim and Dosovitskiy, Alexey and Beyer, Lucas and Bachem, Olivier and Tschannen, Michael and Michalski, Marcin and Bousquet, Olivier and Gelly, Sylvain and Houlsby, Neil</div>
+        <div class="year">Year: 2019</div>
+        <div class="journal">Journal: arXiv preprint arXiv:1910.04867</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/1910.04867" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/1910.04867.pdf" target="_blank">PDF</a>
+            <a href="https://github.com/google-research/task_adaptation" target="_blank">Code</a>
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">S4L: Self-supervised semi-supervised learning</div>
+        <div class="author">Authors: Zhai, Xiaohua and Oliver, Avital and Kolesnikov, Alexander and Beyer, Lucas</div>
+        <div class="year">Year: 2019</div>
+        <div class="journal">Journal: International Conference on Computer Vision (ICCV)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/1905.03670" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/1905.03760.pdf" target="_blank">PDF</a>
+            <a href="https://github.com/google-research/s4l" target="_blank">Code</a>
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">The open images dataset v4: Unified image classification, object detection, and visual relationship detection at scale</div>
+        <div class="author">Authors: Kuznetsova, Alina and Rom, Hassan and Alldrin, Neil and Uijlings, Jasper and Krasin, Ivan and Pont-Tuset, Jordi and Kamali, Shahab and Popov, Stefan and Malloci, Matteo and Kolesnikov, Alexander and Duerig, Tom and Ferrari, Vittorio</div>
+        <div class="year">Year: 2020</div>
+        <div class="journal">Journal: International Journal of Computer Vision (IJCV)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/1811.00982" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/1811.00982.pdf" target="_blank">PDF</a>
+            
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">Detecting Visual Relationships Using Box Attention</div>
+        <div class="author">Authors: Kolesnikov, Alexander and Kuznetsova, Alina and Lampert, Christoph and Ferrari, Vittorio</div>
+        <div class="year">Year: 2019</div>
+        <div class="journal">Journal: International Conference on Computer Vision (ICCV) Workshops</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/1807.02136" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/1807.02136.pdf" target="_blank">PDF</a>
+            
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">Revisiting self-supervised visual representation learning</div>
+        <div class="author">Authors: Kolesnikov, Alexander and Zhai, Xiaohua and Beyer, Lucas</div>
+        <div class="year">Year: 2019</div>
+        <div class="journal">Journal: Conference on Computer Vision and Pattern Recognition (CVPR)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/1901.09005" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/1901.09005.pdf" target="_blank">PDF</a>
+            <a href="https://github.com/google/revisiting-self-supervised" target="_blank">Code</a>
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">Estimating barriers to gene flow from distorted isolation-by-distance patterns</div>
+        <div class="author">Authors: Ringbauer, Harald and Kolesnikov, Alexander and Field, David L and Barton, Nicholas H</div>
+        <div class="year">Year: 2018</div>
+        <div class="journal">Journal: Genetics</div>
+        <div class="links">
+            
+            
+            
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">Probabilistic image colorization</div>
+        <div class="author">Authors: Royer, Amelie and Kolesnikov, Alexander and Lampert, Christoph H</div>
+        <div class="year">Year: 2017</div>
+        <div class="journal">Journal: British Machine Vision Conference (BMVC)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/1705.04258" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/1705.04258.pdf" target="_blank">PDF</a>
+            
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">PixelCNN models with auxiliary variables for natural image modeling</div>
+        <div class="author">Authors: Kolesnikov, Alexander and Lampert, Christoph H</div>
+        <div class="year">Year: 2017</div>
+        <div class="journal">Journal: International Conference on Machine Learning (ICML)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/1612.08185" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/1612.08185.pdf" target="_blank">PDF</a>
+            
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">iCaRL: Incremental Classifier and Representation Learning</div>
+        <div class="author">Authors: Rebuffi, Sylvestre-Alvise and Kolesnikov, Alexander and Sperl, Georg and Lampert, Christoph H.</div>
+        <div class="year">Year: 2017</div>
+        <div class="journal">Journal: Conference on Computer Vision and Pattern Recognition (CVPR)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/1611.07725" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/1611.07725.pdf" target="_blank">PDF</a>
+            <a href="https://github.com/srebuffi/iCaRL" target="_blank">Code</a>
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">Improving weakly-supervised object localization by micro-annotation</div>
+        <div class="author">Authors: Kolesnikov, Alexander and Lampert, Christoph H</div>
+        <div class="year">Year: 2016</div>
+        <div class="journal">Journal: British Machine Vision Conference (BMVC)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/1605.05538" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/1605.05538.pdf" target="_blank">PDF</a>
+            
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">Seed, expand and constrain: Three principles for weakly-supervised image segmentation</div>
+        <div class="author">Authors: Kolesnikov, Alexander and Lampert, Christoph H</div>
+        <div class="year">Year: 2016</div>
+        <div class="journal">Journal: European Conference on Computer Vision (ECCV)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/1603.06098" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/1603.06098.pdf" target="_blank">PDF</a>
+            <a href="https://github.com/akolesnikoff/SEC" target="_blank">Code</a>
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">Identifying Reliable Annotations for Large Scale Image Segmentation</div>
+        <div class="author">Authors: Kolesnikov, Alexander and Lampert, Christoph H</div>
+        <div class="year">Year: 2015</div>
+        <div class="journal">Journal: arXiv preprint arXiv:1504.07460</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/1504.07460" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/1504.07460.pdf" target="_blank">PDF</a>
+            
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="title">Closed-form training of conditional random fields for large scale image segmentation</div>
+        <div class="author">Authors: Kolesnikov, Alexander and Guillaumin, Matthieu and Ferrari, Vittorio and Lampert, Christoph H</div>
+        <div class="year">Year: 2014</div>
+        <div class="journal">Journal: European Conference on Computer Vision (ECCV)</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/1403.7057" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/1403.7057.pdf" target="_blank">PDF</a>
+            
+        </div>
+    </div>
+    
 </body>
 </html>
