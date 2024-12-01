@@ -1,14 +1,14 @@
 /* General Styles */
 body {
     font-family: 'Lato', sans-serif;
-    color: #333;
-    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    color: #374151; /* Charcoal for text */
+    background: #F9FAFB; /* Very light gray for background */
     margin: 0;
     padding: 0;
 }
 
 h1, h2 {
-    color: #007acc;
+    color: #1E3A8A; /* Deep navy blue for headings */
     text-align: center;
     margin-bottom: 20px;
 }
@@ -19,19 +19,19 @@ section {
     margin: 40px auto;
     background: #ffffff;
     border-radius: 15px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* Hero Section Styles */
 .hero {
     text-align: center;
-    background: url('hero-background.jpg') no-repeat center center/cover;
+    background: linear-gradient(135deg, #1E3A8A 40%, #60A5FA); /* Gradient for a clean and modern look */
     color: #fff;
     padding: 100px 20px;
 }
 
 .hero-content {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(30, 58, 138, 0.8); /* Slightly transparent navy to highlight text */
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
@@ -43,6 +43,7 @@ section {
     height: 150px;
     object-fit: cover;
     margin-bottom: 20px;
+    border: 3px solid #FBBF24; /* Golden yellow border to make photo stand out */
 }
 
 /* Card Styles */
@@ -57,15 +58,16 @@ section {
     background: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     max-width: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    border-left: 4px solid #FBBF24; /* Golden accent border */
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
@@ -75,6 +77,17 @@ section {
     border-radius: 5px;
 }
 
+/* Links and Buttons */
+a {
+    color: #60A5FA; /* Muted sky blue for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #1E3A8A; /* Darker blue on hover for better contrast */
+}
+
 /* Contact Section */
 #social-media {
     text-align: center;
@@ -82,11 +95,27 @@ section {
 
 #social-media a {
     margin: 10px;
-    color: #007acc;
+    color: #1E3A8A; /* Deep navy for social media links */
     text-decoration: none;
     font-size: 1.2em;
 }
 
 #social-media a:hover {
-    color: #005f99;
+    color: #FBBF24; /* Golden yellow to indicate hover effect */
+}
+
+/* Button Styles */
+button {
+    background-color: #FBBF24;
+    color: #1E3A8A;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ECA12A; /* Darker shade of gold for hover */
 }
