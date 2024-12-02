@@ -85,11 +85,11 @@
         function toggleCitation(id) {
             const citationElement = document.getElementById(id);
             if (citationElement.style.display === "none" || citationElement.style.display === "") {
-                // Hide all other citation texts first
-                const allCitations = document.getElementsByClassName('citation-text');
-                for (let i = 0; i < allCitations.length; i++) {
-                    allCitations[i].style.display = 'none';
-                }
+                citationElement.style.display = "block";
+            } else {
+                citationElement.style.display = "none";
+            }
+        }
                 // Show the selected citation text
                 citationElement.style.display = "block";
             } else {
