@@ -48,7 +48,7 @@ I also enjoy writing flexible and high-performance research infrastructure (espe
 
 I have been at Google Brain (now DeepMind) since 2018, working in the beautiful city of Zürich. Previously, I did my PhD at [ISTA](https://ist.ac.at/en/home/) under the supervision of [Christoph Lampert](https://cvml.ista.ac.at/), where I was working on weakly-supervised learning and generative image models.
 
-Contact me at `a@akolesnikov.ch`.
+Contact me at `a@kolesnikov.ch`.
 """
     about_html = markdown.markdown(about_markdown)
 
