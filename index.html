@@ -21,7 +21,6 @@
             }
             .header-left {
                 flex: 1;
-                /* Ensures that name/title are left aligned */
             }
             .name {
                 font-size: 2em;
@@ -49,6 +48,32 @@
                 padding: 10px;
                 margin-bottom: 40px;
             }
+
+            /* Styles for Selected Publications */
+            .selected-publications-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                grid-gap: 20px;
+                margin-bottom: 40px;
+            }
+            .selected-publication-card {
+                background-color: #fff;
+                border-radius: 5px;
+                text-align: center;
+                padding: 10px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .selected-publication-card img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 5px;
+            }
+            .selected-publication-card p {
+                margin-top: 10px;
+                font-size: 0.9em;
+                color: #333;
+            }
+
             .entry {
                 margin-bottom: 20px;
                 display: flex;
@@ -140,9 +165,115 @@
 <p>Contact me at <code>a@kolesnikov.ch</code>.</p>
         </div>
 
+        
+        <h1>Selected Publications</h1>
+        <div class="selected-publications-grid">
+        
+            <div class="selected-publication-card">
+                
+                <a href="#pub_tschannen2024jetformer">
+                    <img src="/assets/img/publication_preview/jetformer.png" alt="Preview image">
+                </a>
+                
+                <p><a href="#pub_tschannen2024jetformer" style="text-decoration: none; color: #333;">JetFormer: An Autoregressive Generative Model of Raw Images and Text</a></p>
+            </div>
+        
+            <div class="selected-publication-card">
+                
+                <a href="#pub_beyer2024paligemma">
+                    <img src="/assets/img/publication_preview/paligemma.png" alt="Preview image">
+                </a>
+                
+                <p><a href="#pub_beyer2024paligemma" style="text-decoration: none; color: #333;">Paligemma: A versatile 3b vlm for transfer</a></p>
+            </div>
+        
+            <div class="selected-publication-card">
+                
+                <a href="#pub_pinto2023tuning">
+                    <img src="/assets/img/publication_preview/tune.png" alt="Preview image">
+                </a>
+                
+                <p><a href="#pub_pinto2023tuning" style="text-decoration: none; color: #333;">Tuning computer vision models with task rewards</a></p>
+            </div>
+        
+            <div class="selected-publication-card">
+                
+                <a href="#pub_kolesnikov2022uvim">
+                    <img src="/assets/img/publication_preview/uvim.png" alt="Preview image">
+                </a>
+                
+                <p><a href="#pub_kolesnikov2022uvim" style="text-decoration: none; color: #333;">UViM: A unified modeling approach for vision with learned guiding codes</a></p>
+            </div>
+        
+            <div class="selected-publication-card">
+                
+                <a href="#pub_zhai2022scaling">
+                    <img src="/assets/img/publication_preview/svit.png" alt="Preview image">
+                </a>
+                
+                <p><a href="#pub_zhai2022scaling" style="text-decoration: none; color: #333;">Scaling vision transformers</a></p>
+            </div>
+        
+            <div class="selected-publication-card">
+                
+                <a href="#pub_tolstikhin2021mlp">
+                    <img src="/assets/img/publication_preview/mixer.png" alt="Preview image">
+                </a>
+                
+                <p><a href="#pub_tolstikhin2021mlp" style="text-decoration: none; color: #333;">MLP-Mixer: An all-mlp architecture for vision</a></p>
+            </div>
+        
+            <div class="selected-publication-card">
+                
+                <a href="#pub_dosovitskiy2020image">
+                    <img src="/assets/img/publication_preview/vit.png" alt="Preview image">
+                </a>
+                
+                <p><a href="#pub_dosovitskiy2020image" style="text-decoration: none; color: #333;">An image is worth 16x16 words: Transformers for image recognition at scale</a></p>
+            </div>
+        
+            <div class="selected-publication-card">
+                
+                <a href="#pub_kolesnikov2020big">
+                    <img src="/assets/img/publication_preview/big_transfer.png" alt="Preview image">
+                </a>
+                
+                <p><a href="#pub_kolesnikov2020big" style="text-decoration: none; color: #333;">Big transfer (BiT): General visual representation learning</a></p>
+            </div>
+        
+            <div class="selected-publication-card">
+                
+                <a href="#pub_kolesnikov2019revisiting">
+                    <img src="/assets/img/publication_preview/revisiting.png" alt="Preview image">
+                </a>
+                
+                <p><a href="#pub_kolesnikov2019revisiting" style="text-decoration: none; color: #333;">Revisiting self-supervised visual representation learning</a></p>
+            </div>
+        
+            <div class="selected-publication-card">
+                
+                <a href="#pub_rebuffi2017icarl">
+                    <img src="/assets/img/publication_preview/icarl.jpg" alt="Preview image">
+                </a>
+                
+                <p><a href="#pub_rebuffi2017icarl" style="text-decoration: none; color: #333;">iCaRL: Incremental Classifier and Representation Learning</a></p>
+            </div>
+        
+            <div class="selected-publication-card">
+                
+                <a href="#pub_kolesnikov2016seed">
+                    <img src="/assets/img/publication_preview/sec.jpg" alt="Preview image">
+                </a>
+                
+                <p><a href="#pub_kolesnikov2016seed" style="text-decoration: none; color: #333;">Seed, expand and constrain: Three principles for weakly-supervised image segmentation</a></p>
+            </div>
+        
+        </div>
+        
+
         <h1>Publications</h1>
         
-        <div class="entry">
+        <div class="entry" id="pub_tschannen2024jetformer">
             <div class="entry-content">
                 <div class="entry-title">JetFormer: An Autoregressive Generative Model of Raw Images and Text</div>
                 
@@ -173,7 +304,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_beyer2024paligemma">
             <div class="entry-content">
                 <div class="entry-title">Paligemma: A versatile 3b vlm for transfer</div>
                 
@@ -204,7 +335,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_beyer2023study">
             <div class="entry-content">
                 <div class="entry-title">A Study of Autoregressive Decoders for Multi-Tasking in Computer Vision</div>
                 
@@ -237,7 +368,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_zhai2023sigmoid">
             <div class="entry-content">
                 <div class="entry-title">Sigmoid Loss for Language Image Pre-Training</div>
                 
@@ -270,7 +401,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_dehghani2023scaling">
             <div class="entry-content">
                 <div class="entry-title">Scaling vision transformers to 22 billion parameters</div>
                 
@@ -301,7 +432,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_pinto2023tuning">
             <div class="entry-content">
                 <div class="entry-title">Tuning computer vision models with task rewards</div>
                 
@@ -334,7 +465,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_beyer2022flexivit">
             <div class="entry-content">
                 <div class="entry-title">FlexiViT: One Model for All Patch Sizes</div>
                 
@@ -367,7 +498,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_chen2022pali">
             <div class="entry-content">
                 <div class="entry-title">PaLI: A Jointly-Scaled Multilingual Language-Image Model</div>
                 
@@ -398,7 +529,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_kolesnikov2022uvim">
             <div class="entry-content">
                 <div class="entry-title">UViM: A unified modeling approach for vision with learned guiding codes</div>
                 
@@ -431,7 +562,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_beyer2022better">
             <div class="entry-content">
                 <div class="entry-title">Better plain ViT baselines for ImageNet-1k</div>
                 
@@ -464,7 +595,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_zhai2022scaling">
             <div class="entry-content">
                 <div class="entry-title">Scaling vision transformers</div>
                 
@@ -497,7 +628,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_beyer2022knowledge">
             <div class="entry-content">
                 <div class="entry-title">Knowledge distillation: A good teacher is patient and consistent</div>
                 
@@ -530,7 +661,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_zhai2022lit">
             <div class="entry-content">
                 <div class="entry-title">LiT: Zero-shot transfer with locked-image text tuning</div>
                 
@@ -563,7 +694,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_steiner2021how">
             <div class="entry-content">
                 <div class="entry-title">How to train your ViT? data, augmentation, and regularization in vision transformers</div>
                 
@@ -596,7 +727,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_tolstikhin2021mlp">
             <div class="entry-content">
                 <div class="entry-title">MLP-Mixer: An all-mlp architecture for vision</div>
                 
@@ -629,7 +760,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_dosovitskiy2020image">
             <div class="entry-content">
                 <div class="entry-title">An image is worth 16x16 words: Transformers for image recognition at scale</div>
                 
@@ -662,7 +793,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_kolesnikov2020big">
             <div class="entry-content">
                 <div class="entry-title">Big transfer (BiT): General visual representation learning</div>
                 
@@ -695,7 +826,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_djolonga2021robustness">
             <div class="entry-content">
                 <div class="entry-title">On Robustness and Transferability of Convolutional Neural Networks</div>
                 
@@ -726,7 +857,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_beyer2020we">
             <div class="entry-content">
                 <div class="entry-title">Are we done with imagenet?</div>
                 
@@ -759,7 +890,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_zhai2019visual">
             <div class="entry-content">
                 <div class="entry-title">A Large-scale Study of Representation Learning with the Visual Task Adaptation Benchmark</div>
                 
@@ -792,7 +923,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_zhai2019s4l">
             <div class="entry-content">
                 <div class="entry-title">S4L: Self-supervised semi-supervised learning</div>
                 
@@ -825,7 +956,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_kuznetsova2020open">
             <div class="entry-content">
                 <div class="entry-title">The open images dataset v4: Unified image classification, object detection, and visual relationship detection at scale</div>
                 
@@ -856,7 +987,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_detecting2019kolesnikov">
             <div class="entry-content">
                 <div class="entry-title">Detecting Visual Relationships Using Box Attention</div>
                 
@@ -887,7 +1018,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_kolesnikov2019revisiting">
             <div class="entry-content">
                 <div class="entry-title">Revisiting self-supervised visual representation learning</div>
                 
@@ -920,7 +1051,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_ringbauer2018estimating">
             <div class="entry-content">
                 <div class="entry-title">Estimating barriers to gene flow from distorted isolation-by-distance patterns</div>
                 
@@ -947,7 +1078,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_royer2017probabilistic">
             <div class="entry-content">
                 <div class="entry-title">Probabilistic image colorization</div>
                 
@@ -978,7 +1109,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_kolesnikov2017pixelcnn">
             <div class="entry-content">
                 <div class="entry-title">PixelCNN models with auxiliary variables for natural image modeling</div>
                 
@@ -1009,7 +1140,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_rebuffi2017icarl">
             <div class="entry-content">
                 <div class="entry-title">iCaRL: Incremental Classifier and Representation Learning</div>
                 
@@ -1042,7 +1173,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_kolesnikov2016improving">
             <div class="entry-content">
                 <div class="entry-title">Improving weakly-supervised object localization by micro-annotation</div>
                 
@@ -1073,7 +1204,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_kolesnikov2016seed">
             <div class="entry-content">
                 <div class="entry-title">Seed, expand and constrain: Three principles for weakly-supervised image segmentation</div>
                 
@@ -1106,7 +1237,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_kolesnikov2015identifying">
             <div class="entry-content">
                 <div class="entry-title">Identifying Reliable Annotations for Large Scale Image Segmentation</div>
                 
@@ -1137,7 +1268,7 @@
             
         </div>
         
-        <div class="entry">
+        <div class="entry" id="pub_kolesnikov2014closed">
             <div class="entry-content">
                 <div class="entry-title">Closed-form training of conditional random fields for large scale image segmentation</div>
                 

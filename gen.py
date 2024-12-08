@@ -54,6 +54,9 @@ Contact me at `a@kolesnikov.ch`.
 """
     about_html = markdown.markdown(about_markdown)
 
+    # Separate selected entries
+    selected_entries = [entry for entry in entries if entry.get('selected', '').lower() == 'true']
+
     # A simple HTML template using Jinja2 syntax
     html_template = """
     <!DOCTYPE html>
@@ -78,7 +81,6 @@ Contact me at `a@kolesnikov.ch`.
             }
             .header-left {
                 flex: 1;
-                /* Ensures that name/title are left aligned */
             }
             .name {
                 font-size: 2em;
@@ -106,6 +108,32 @@ Contact me at `a@kolesnikov.ch`.
                 padding: 10px;
                 margin-bottom: 40px;
             }
+
+            /* Styles for Selected Publications */
+            .selected-publications-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                grid-gap: 20px;
+                margin-bottom: 40px;
+            }
+            .selected-publication-card {
+                background-color: #fff;
+                border-radius: 5px;
+                text-align: center;
+                padding: 10px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .selected-publication-card img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 5px;
+            }
+            .selected-publication-card p {
+                margin-top: 10px;
+                font-size: 0.9em;
+                color: #333;
+            }
+
             .entry {
                 margin-bottom: 20px;
                 display: flex;
@@ -193,9 +221,25 @@ Contact me at `a@kolesnikov.ch`.
             {{ about_html | safe }}
         </div>
 
+        {% if selected_entries %}
+        <h1>Selected Publications</h1>
+        <div class="selected-publications-grid">
+        {% for entry in selected_entries %}
+            <div class="selected-publication-card">
+                {% if entry.preview %}
+                <a href="#pub_{{ entry.ID }}">
+                    <img src="/assets/img/publication_preview/{{ entry.preview }}" alt="Preview image">
+                </a>
+                {% endif %}
+                <p><a href="#pub_{{ entry.ID }}" style="text-decoration: none; color: #333;">{{ entry.title }}</a></p>
+            </div>
+        {% endfor %}
+        </div>
+        {% endif %}
+
         <h1>Publications</h1>
         {% for entry in entries %}
-        <div class="entry">
+        <div class="entry" id="pub_{{ entry.ID }}">
             <div class="entry-content">
                 <div class="entry-title">{{ entry.title }}</div>
                 {% if entry.author %}
@@ -247,7 +291,7 @@ Contact me at `a@kolesnikov.ch`.
 
     # Using Jinja2 to populate the HTML template with entries
     template = Template(html_template)
-    rendered_html = template.render(entries=entries, about_html=about_html)
+    rendered_html = template.render(entries=entries, about_html=about_html, selected_entries=selected_entries)
 
     # Write the rendered HTML to a file
     with open("index.html", "w", encoding="utf-8") as f:
