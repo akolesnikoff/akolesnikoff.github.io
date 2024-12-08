@@ -90,6 +90,15 @@ Contact me at `a@kolesnikov.ch`.
                 border-radius: 5px;
                 text-align: left;
             }
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                object-fit: cover;
+            }
             .entry {
                 margin-bottom: 20px;
                 display: flex;
@@ -125,7 +134,7 @@ Contact me at `a@kolesnikov.ch`.
                 margin-left: 20px;
             }
             .preview img {
-                max-width: 225px; /* 50% wider than original */
+                max-width: 225px;
                 height: auto;
                 margin-top: 10px;
                 border-radius: 5px;
@@ -151,15 +160,6 @@ Contact me at `a@kolesnikov.ch`.
                 white-space: pre-wrap;
                 border-radius: 5px;
             }
-            .profile-image {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                width: 120px;
-                height: 120px;
-                border-radius: 50%;
-                object-fit: cover;
-            }
         </style>
         <script>
             function toggleCitation(id) {
@@ -174,7 +174,7 @@ Contact me at `a@kolesnikov.ch`.
     </head>
     <body>
         <div class="header">
-            <img src="/assets/img/profile.jpg" class="profile-image" alt="Profile image">
+            <img src="/assets/img/profile.jpg" alt="Personal Photo" class="profile-photo">
             <div class="name">Alexander Kolesnikov</div>
             <div class="title">Staff Research Scientist at Google DeepMind</div>
             <div class="about">
