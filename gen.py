@@ -69,9 +69,8 @@ Contact me at `a@kolesnikov.ch`.
                 background-color: #f9f9f9;
             }
             .header {
-                text-align: center;
-                margin-bottom: 40px;
                 position: relative;
+                margin-bottom: 40px;
             }
             .name {
                 font-size: 2em;
@@ -89,15 +88,18 @@ Contact me at `a@kolesnikov.ch`.
                 background-color: #fff;
                 border-radius: 5px;
                 text-align: left;
+                /* Add padding on the right so text doesn't go under the image */
+                padding-right: 140px;
             }
-            .profile-photo {
+            .profile-img {
                 width: 120px;
                 height: 120px;
                 border-radius: 50%;
-                position: absolute;
-                top: 20px;
-                right: 20px;
                 object-fit: cover;
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 0;
             }
             .entry {
                 margin-bottom: 20px;
@@ -134,7 +136,7 @@ Contact me at `a@kolesnikov.ch`.
                 margin-left: 20px;
             }
             .preview img {
-                max-width: 225px;
+                max-width: 225px; /* 50% wider than original */
                 height: auto;
                 margin-top: 10px;
                 border-radius: 5px;
@@ -174,9 +176,9 @@ Contact me at `a@kolesnikov.ch`.
     </head>
     <body>
         <div class="header">
-            <img src="/assets/img/profile.jpg" alt="Personal Photo" class="profile-photo">
             <div class="name">Alexander Kolesnikov</div>
             <div class="title">Staff Research Scientist at Google DeepMind</div>
+            <img src="/assets/img/profile.jpg" class="profile-img" alt="Profile Image"/>
             <div class="about">
                 {{ about_html | safe }}
             </div>
