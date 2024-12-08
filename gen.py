@@ -60,18 +60,20 @@ Contact me at `a@kolesnikov.ch`.
     # A simple HTML template using Jinja2 syntax
     html_template = """
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Personal Page of Alexander Kolesnikov</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
         <style>
             body {
-                font-family: Arial, sans-serif;
-                line-height: 1.6;
+                font-family: 'Inter', sans-serif;
+                line-height: 1.7;
                 max-width: 800px;
                 margin: auto;
                 padding: 20px;
-                background-color: #f9f9f9;
+                background: linear-gradient(to bottom right, #fafafa, #f3f3f3);
+                color: #333;
             }
             .header {
                 display: flex;
@@ -84,13 +86,14 @@ Contact me at `a@kolesnikov.ch`.
             }
             .name {
                 font-size: 2em;
-                font-weight: bold;
+                font-weight: 600;
                 margin: 0;
+                color: #222;
             }
             .title {
-                font-size: 1.2em;
+                font-size: 1.1em;
                 color: #555;
-                margin: 5px 0 0 0;
+                margin: 8px 0 0 0;
             }
             .profile-img {
                 width: 120px;
@@ -98,6 +101,7 @@ Contact me at `a@kolesnikov.ch`.
                 border-radius: 50%;
                 object-fit: cover;
                 margin-left: 20px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.08);
             }
             .about {
                 font-size: 1em;
@@ -105,8 +109,18 @@ Contact me at `a@kolesnikov.ch`.
                 background-color: #fff;
                 border-radius: 5px;
                 text-align: justify;
-                padding: 10px;
+                padding: 15px;
                 margin-bottom: 40px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            }
+
+            h1 {
+                font-size: 1.6em;
+                font-weight: 600;
+                margin: 40px 0 20px;
+                color: #222;
+                border-bottom: 2px solid #ddd;
+                padding-bottom: 5px;
             }
 
             /* Styles for Selected Publications */
@@ -121,7 +135,12 @@ Contact me at `a@kolesnikov.ch`.
                 border-radius: 5px;
                 text-align: center;
                 padding: 10px;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+            .selected-publication-card:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             }
             .selected-publication-card img {
                 max-width: 100%;
@@ -132,6 +151,14 @@ Contact me at `a@kolesnikov.ch`.
                 margin-top: 10px;
                 font-size: 0.9em;
                 color: #333;
+                line-height: 1.4;
+            }
+            .selected-publication-card a {
+                text-decoration: none;
+                color: #333;
+            }
+            .selected-publication-card a:hover {
+                color: #0066cc;
             }
 
             .entry {
@@ -141,20 +168,22 @@ Contact me at `a@kolesnikov.ch`.
                 background-color: #fff;
                 padding: 15px;
                 border-radius: 5px;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             }
             .entry-content {
                 flex: 1;
                 text-align: justify;
             }
             .entry-title {
-                font-weight: bold;
+                font-weight: 600;
                 font-size: 1.2em;
                 margin-bottom: 5px;
+                color: #222;
             }
             .author, .year, .journal, .links {
                 margin-top: 5px;
                 color: #555;
+                font-size: 0.95em;
             }
             .links {
                 display: flex;
@@ -165,6 +194,10 @@ Contact me at `a@kolesnikov.ch`.
             .links a {
                 text-decoration: none;
                 color: #0066cc;
+                font-weight: 500;
+            }
+            .links a:hover {
+                text-decoration: underline;
             }
             .preview {
                 margin-left: 20px;
@@ -174,18 +207,20 @@ Contact me at `a@kolesnikov.ch`.
                 height: auto;
                 margin-top: 10px;
                 border-radius: 5px;
+                box-shadow: 0 1px 4px rgba(0,0,0,0.1);
             }
             .cite-button {
                 background-color: #0066cc;
                 color: white;
                 border: none;
-                padding: 5px 10px;
+                padding: 6px 12px;
                 cursor: pointer;
                 border-radius: 5px;
                 transition: background-color 0.3s;
+                font-size: 0.9em;
             }
             .cite-button:hover {
-                background-color: #004999;
+                background-color: #004a99;
             }
             .citation-text {
                 margin-top: 10px;
@@ -195,6 +230,8 @@ Contact me at `a@kolesnikov.ch`.
                 display: none;
                 white-space: pre-wrap;
                 border-radius: 5px;
+                font-size: 0.9em;
+                color: #333;
             }
         </style>
         <script>
@@ -231,7 +268,7 @@ Contact me at `a@kolesnikov.ch`.
                     <img src="/assets/img/publication_preview/{{ entry.preview }}" alt="Preview image">
                 </a>
                 {% endif %}
-                <p><a href="#pub_{{ entry.ID }}" style="text-decoration: none; color: #333;">{{ entry.title }}</a></p>
+                <p><a href="#pub_{{ entry.ID }}">{{ entry.title }}</a></p>
             </div>
         {% endfor %}
         </div>
@@ -278,7 +315,7 @@ Contact me at `a@kolesnikov.ch`.
 
     # Prepare BibTeX entries for each citation button
     for entry in entries:
-        entry_type = entry.get('ENTRYTYPE', 'article').capitalize()
+        entry_type = entry.get('ENTRYTYPE', 'article')
         entry_id = entry.get('ID', entry.get('id', ''))
         title = entry.get('title', 'No Title').replace('{', '').replace('}', '')
         # Use original_author here to keep BibTeX format
