@@ -193,7 +193,7 @@ Contact me at `a@kolesnikov.ch`.
             {{ about_html | safe }}
         </div>
 
-        <h1>Bibliography</h1>
+        <h1>Publications</h1>
         {% for entry in entries %}
         <div class="entry">
             <div class="entry-content">
