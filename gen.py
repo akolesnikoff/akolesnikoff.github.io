@@ -18,10 +18,11 @@ def read_bibtex_string(bibtex_string):
     parser = BibTexParser()
     parser.customization = bibtexparser.customization.convert_to_unicode
     bib_database = bibtexparser.load(bibtex_file, parser=parser)
-    
-    # Adapt author names to "First name Last name" format
+
+    # Adapt author names to "First name Last name" format, but keep original authors for citation
     for entry in bib_database.entries:
         if 'author' in entry:
+            entry['original_author'] = entry['author']
             authors = entry['author'].split(' and ')
             formatted_authors = []
             for author in authors:
@@ -70,6 +71,7 @@ Contact me at `a@kolesnikov.ch`.
             .header {
                 text-align: center;
                 margin-bottom: 40px;
+                position: relative;
             }
             .name {
                 font-size: 2em;
@@ -149,6 +151,15 @@ Contact me at `a@kolesnikov.ch`.
                 white-space: pre-wrap;
                 border-radius: 5px;
             }
+            .profile-image {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
         </style>
         <script>
             function toggleCitation(id) {
@@ -163,6 +174,7 @@ Contact me at `a@kolesnikov.ch`.
     </head>
     <body>
         <div class="header">
+            <img src="/assets/img/profile.jpg" class="profile-image" alt="Profile image">
             <div class="name">Alexander Kolesnikov</div>
             <div class="title">Staff Research Scientist at Google DeepMind</div>
             <div class="about">
@@ -211,14 +223,14 @@ Contact me at `a@kolesnikov.ch`.
 
     # Prepare BibTeX entries for each citation button
     for entry in entries:
-        # Ensure all necessary fields are present to avoid KeyError
         entry_type = entry.get('ENTRYTYPE', 'article').capitalize()
         entry_id = entry.get('ID', entry.get('id', ''))
         title = entry.get('title', 'No Title').replace('{', '').replace('}', '')
-        author = entry.get('author', 'No Author').replace('{', '').replace('}', '')
+        # Use original_author here to keep BibTeX format
+        author = entry.get('original_author', 'No Author')
         journal = entry.get('journal', 'No Journal').replace('{', '').replace('}', '')
         year = entry.get('year', 'No Year').replace('{', '').replace('}', '')
-        
+
         # Construct the BibTeX entry string
         entry['bibtex'] = f"@{entry_type}{{{entry_id},\n  title = {{{title}}},\n  author = {{{author}}},\n  journal = {{{journal}}},\n  year = {{{year}}}\n}}"
 
