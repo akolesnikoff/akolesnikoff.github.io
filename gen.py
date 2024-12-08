@@ -42,11 +42,13 @@ def read_bibtex_string(bibtex_string):
 def create_html(entries):
     # Convert the About Me section from Markdown to HTML
     about_markdown = """
-I am an ML research scientist, who is passionate about pushing the research frontier in deep learning, and in particular interested in multimodal intelligence. Some of my prior achievements include training SOTA vision models ([ImageNet SOTA in 2019](https://arxiv.org/abs/1912.11370), [ImageNet SOTA 2020](https://arxiv.org/abs/2010.11929), [ImageNet SOTA 2021](https://arxiv.org/abs/2106.04560)) and SOTA open weight models: [SigLIP](https://arxiv.org/abs/2303.15343) and [PaliGemma](https://github.com/google-research/big_vision/blob/main/big_vision/configs/proj/paligemma/README.md), as well as work in neural architectures: [BiT](https://arxiv.org/abs/1912.11370), [ViT](https://arxiv.org/abs/2010.11929), [MLP-Mixer](https://arxiv.org/abs/2105.01601) and [FlexiViT](https://arxiv.org/abs/2212.08013). Recently, I have been focused on unifying, simplifying, and scaling multimodal deep learning: [UViM](https://arxiv.org/abs/2205.10337), [Vision with Rewards](https://arxiv.org/abs/2302.08242), [JetFormer](https://arxiv.org/abs/2411.19722).
+I am an ML research scientist, who is passionate about pushing the research frontier in deep learning, and in particular interested in multimodal intelligence. Currently I am a member of technical staff at OpenAI, working on multimodal intelligence.
+
+Some of my prior achievements include training SOTA vision models ([ImageNet SOTA in 2019](https://arxiv.org/abs/1912.11370), [ImageNet SOTA 2020](https://arxiv.org/abs/2010.11929), [ImageNet SOTA 2021](https://arxiv.org/abs/2106.04560)) and SOTA open weight models: [SigLIP](https://arxiv.org/abs/2303.15343) and [PaliGemma](https://github.com/google-research/big_vision/blob/main/big_vision/configs/proj/paligemma/README.md), as well as work in neural architectures: [BiT](https://arxiv.org/abs/1912.11370), [ViT](https://arxiv.org/abs/2010.11929), [MLP-Mixer](https://arxiv.org/abs/2105.01601) and [FlexiViT](https://arxiv.org/abs/2212.08013). Recently, I have been focused on unifying, simplifying, and scaling multimodal deep learning: [UViM](https://arxiv.org/abs/2205.10337), [Vision with Rewards](https://arxiv.org/abs/2302.08242), [JetFormer](https://arxiv.org/abs/2411.19722).
 
 I also enjoy writing flexible and high-performance research infrastructure (especially in Jax). A large part of it is open-sourced: [big_vision](https://github.com/google-research/big_vision).
 
-I have been at Google Brain (now DeepMind) since 2018, working in the beautiful city of Zürich. Previously, I did my PhD at [ISTA](https://ist.ac.at/en/home/) under the supervision of [Christoph Lampert](https://cvml.ista.ac.at/), where I worked on weakly-supervised learning and generative image models.
+Previously, I have been at Google Brain (now Google DeepMind) did my PhD at [ISTA](https://ist.ac.at/en/home/) under the supervision of [Christoph Lampert](https://cvml.ista.ac.at/), where I worked on weakly-supervised learning and generative image models.
 
 Contact me at `a@kolesnikov.ch`.
 """
@@ -182,7 +184,7 @@ Contact me at `a@kolesnikov.ch`.
         <div class="header">
             <div class="header-left">
                 <p class="name">Alexander Kolesnikov</p>
-                <p class="title">Staff Research Scientist at Google DeepMind</p>
+                <p class="title">Member of Technical Staff at OpenAI</p>
             </div>
             <img src="/assets/img/profile.jpg" class="profile-img" alt="Profile Image"/>
         </div>
