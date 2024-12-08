@@ -69,37 +69,40 @@ Contact me at `a@kolesnikov.ch`.
                 background-color: #f9f9f9;
             }
             .header {
-                position: relative;
-                margin-bottom: 40px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 20px;
+            }
+            .header-left {
+                flex: 1;
+                /* Ensures that name/title are left aligned */
             }
             .name {
                 font-size: 2em;
                 font-weight: bold;
+                margin: 0;
             }
             .title {
                 font-size: 1.2em;
                 color: #555;
-            }
-            .about {
-                margin-top: 20px;
-                font-size: 1em;
-                color: #333;
-                padding: 10px;
-                background-color: #fff;
-                border-radius: 5px;
-                text-align: left;
-                /* Add padding on the right so text doesn't go under the image */
-                padding-right: 140px;
+                margin: 5px 0 0 0;
             }
             .profile-img {
                 width: 120px;
                 height: 120px;
                 border-radius: 50%;
                 object-fit: cover;
-                position: absolute;
-                top: 0;
-                right: 0;
-                margin: 0;
+                margin-left: 20px;
+            }
+            .about {
+                font-size: 1em;
+                color: #333;
+                background-color: #fff;
+                border-radius: 5px;
+                text-align: justify;
+                padding: 10px;
+                margin-bottom: 40px;
             }
             .entry {
                 margin-bottom: 20px;
@@ -112,6 +115,7 @@ Contact me at `a@kolesnikov.ch`.
             }
             .entry-content {
                 flex: 1;
+                text-align: justify;
             }
             .entry-title {
                 font-weight: bold;
@@ -136,7 +140,7 @@ Contact me at `a@kolesnikov.ch`.
                 margin-left: 20px;
             }
             .preview img {
-                max-width: 225px; /* 50% wider than original */
+                max-width: 225px;
                 height: auto;
                 margin-top: 10px;
                 border-radius: 5px;
@@ -176,12 +180,15 @@ Contact me at `a@kolesnikov.ch`.
     </head>
     <body>
         <div class="header">
-            <div class="name">Alexander Kolesnikov</div>
-            <div class="title">Staff Research Scientist at Google DeepMind</div>
-            <img src="/assets/img/profile.jpg" class="profile-img" alt="Profile Image"/>
-            <div class="about">
-                {{ about_html | safe }}
+            <div class="header-left">
+                <p class="name">Alexander Kolesnikov</p>
+                <p class="title">Staff Research Scientist at Google DeepMind</p>
             </div>
+            <img src="/assets/img/profile.jpg" class="profile-img" alt="Profile Image"/>
+        </div>
+
+        <div class="about">
+            {{ about_html | safe }}
         </div>
 
         <h1>Bibliography</h1>

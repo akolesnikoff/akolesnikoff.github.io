@@ -14,37 +14,40 @@
                 background-color: #f9f9f9;
             }
             .header {
-                position: relative;
-                margin-bottom: 40px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 20px;
+            }
+            .header-left {
+                flex: 1;
+                /* Ensures that name/title are left aligned */
             }
             .name {
                 font-size: 2em;
                 font-weight: bold;
+                margin: 0;
             }
             .title {
                 font-size: 1.2em;
                 color: #555;
-            }
-            .about {
-                margin-top: 20px;
-                font-size: 1em;
-                color: #333;
-                padding: 10px;
-                background-color: #fff;
-                border-radius: 5px;
-                text-align: left;
-                /* Add padding on the right so text doesn't go under the image */
-                padding-right: 140px;
+                margin: 5px 0 0 0;
             }
             .profile-img {
                 width: 120px;
                 height: 120px;
                 border-radius: 50%;
                 object-fit: cover;
-                position: absolute;
-                top: 0;
-                right: 0;
-                margin: 0;
+                margin-left: 20px;
+            }
+            .about {
+                font-size: 1em;
+                color: #333;
+                background-color: #fff;
+                border-radius: 5px;
+                text-align: justify;
+                padding: 10px;
+                margin-bottom: 40px;
             }
             .entry {
                 margin-bottom: 20px;
@@ -57,6 +60,7 @@
             }
             .entry-content {
                 flex: 1;
+                text-align: justify;
             }
             .entry-title {
                 font-weight: bold;
@@ -81,7 +85,7 @@
                 margin-left: 20px;
             }
             .preview img {
-                max-width: 225px; /* 50% wider than original */
+                max-width: 225px;
                 height: auto;
                 margin-top: 10px;
                 border-radius: 5px;
@@ -121,15 +125,18 @@
     </head>
     <body>
         <div class="header">
-            <div class="name">Alexander Kolesnikov</div>
-            <div class="title">Staff Research Scientist at Google DeepMind</div>
+            <div class="header-left">
+                <p class="name">Alexander Kolesnikov</p>
+                <p class="title">Staff Research Scientist at Google DeepMind</p>
+            </div>
             <img src="/assets/img/profile.jpg" class="profile-img" alt="Profile Image"/>
-            <div class="about">
-                <p>I am an ML research scientist, who is passionate about pushing the research frontier in deep learning, and in particular interested in multimodal intelligence. Some of my prior achievements include training SOTA vision models (<a href="https://arxiv.org/abs/1912.11370">ImageNet SOTA in 2019</a>, <a href="https://arxiv.org/abs/2010.11929">ImageNet SOTA 2020</a>, <a href="https://arxiv.org/abs/2106.04560">ImageNet SOTA 2021</a>) and SOTA open weight models: <a href="https://arxiv.org/abs/2303.15343">SigLIP</a> and <a href="https://github.com/google-research/big_vision/blob/main/big_vision/configs/proj/paligemma/README.md">PaliGemma</a>, as well as work in neural architectures: <a href="https://arxiv.org/abs/1912.11370">BiT</a>, <a href="https://arxiv.org/abs/2010.11929">ViT</a>, <a href="https://arxiv.org/abs/2105.01601">MLP-Mixer</a> and <a href="https://arxiv.org/abs/2212.08013">FlexiViT</a>. Recently, I have been focused on unifying, simplifying, and scaling multimodal deep learning: <a href="https://arxiv.org/abs/2205.10337">UViM</a>, <a href="https://arxiv.org/abs/2302.08242">Vision with Rewards</a>, <a href="https://arxiv.org/abs/2411.19722">JetFormer</a>.</p>
+        </div>
+
+        <div class="about">
+            <p>I am an ML research scientist, who is passionate about pushing the research frontier in deep learning, and in particular interested in multimodal intelligence. Some of my prior achievements include training SOTA vision models (<a href="https://arxiv.org/abs/1912.11370">ImageNet SOTA in 2019</a>, <a href="https://arxiv.org/abs/2010.11929">ImageNet SOTA 2020</a>, <a href="https://arxiv.org/abs/2106.04560">ImageNet SOTA 2021</a>) and SOTA open weight models: <a href="https://arxiv.org/abs/2303.15343">SigLIP</a> and <a href="https://github.com/google-research/big_vision/blob/main/big_vision/configs/proj/paligemma/README.md">PaliGemma</a>, as well as work in neural architectures: <a href="https://arxiv.org/abs/1912.11370">BiT</a>, <a href="https://arxiv.org/abs/2010.11929">ViT</a>, <a href="https://arxiv.org/abs/2105.01601">MLP-Mixer</a> and <a href="https://arxiv.org/abs/2212.08013">FlexiViT</a>. Recently, I have been focused on unifying, simplifying, and scaling multimodal deep learning: <a href="https://arxiv.org/abs/2205.10337">UViM</a>, <a href="https://arxiv.org/abs/2302.08242">Vision with Rewards</a>, <a href="https://arxiv.org/abs/2411.19722">JetFormer</a>.</p>
 <p>I also enjoy writing flexible and high-performance research infrastructure (especially in Jax). A large part of it is open-sourced: <a href="https://github.com/google-research/big_vision">big_vision</a>.</p>
 <p>I have been at Google Brain (now DeepMind) since 2018, working in the beautiful city of Zürich. Previously, I did my PhD at <a href="https://ist.ac.at/en/home/">ISTA</a> under the supervision of <a href="https://cvml.ista.ac.at/">Christoph Lampert</a>, where I worked on weakly-supervised learning and generative image models.</p>
 <p>Contact me at <code>a@kolesnikov.ch</code>.</p>
-            </div>
         </div>
 
         <h1>Bibliography</h1>
