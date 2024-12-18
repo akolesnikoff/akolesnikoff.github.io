@@ -11,6 +11,7 @@ from bibtexparser.bparser import BibTexParser
 from jinja2 import Template
 from io import StringIO
 import markdown
+from datetime import datetime
 
 # Function to read the BibTeX string and parse it
 def read_bibtex_string(bibtex_string):
@@ -299,6 +300,17 @@ You can reach me at `a@kolesnikov.ch`.
                 box-shadow: var(--shadow-sm);
             }
 
+            .footer {
+                margin-top: 4rem;
+                padding: 2rem;
+                background: var(--bg-primary);
+                border-radius: 1rem;
+                box-shadow: var(--shadow-md);
+                text-align: center;
+                color: var(--text-secondary);
+                font-size: 0.9rem;
+            }
+
             @media (max-width: 768px) {
                 body {
                     padding: 1rem;
@@ -401,6 +413,12 @@ You can reach me at `a@kolesnikov.ch`.
             {% endif %}
         </div>
         {% endfor %}
+
+        <div class="footer">
+            <p>Last updated: {{ current_date }}</p>
+            <p>This website was generated with the assistance of Large Language Models.</p>
+            <p>© {{ current_year }} Alexander Kolesnikov.</p>
+        </div>
     </body>
     </html>
     """
@@ -420,7 +438,13 @@ You can reach me at `a@kolesnikov.ch`.
 
     # Using Jinja2 to populate the HTML template with entries
     template = Template(html_template)
-    rendered_html = template.render(entries=entries, about_html=about_html, selected_entries=selected_entries)
+    rendered_html = template.render(
+        entries=entries, 
+        about_html=about_html, 
+        selected_entries=selected_entries,
+        current_date=datetime.now().strftime("%B %d, %Y"),
+        current_year=datetime.now().year
+    )
 
     # Write the rendered HTML to a file
     with open("index.html", "w", encoding="utf-8") as f:
