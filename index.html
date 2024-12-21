@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Personal Page of Alexander Kolesnikov</title>
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <style>
             :root {
                 --primary-color: #2563eb;
@@ -13,9 +13,10 @@
                 --text-secondary: #4b5563;
                 --bg-primary: #ffffff;
                 --bg-secondary: #f8fafc;
-                --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-                --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
-                --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+                --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+                --shadow-md: 0 4px 12px rgba(0,0,0,0.05);
+                --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.05);
+                --gradient-primary: linear-gradient(135deg, #2563eb, #4f46e5);
             }
 
             * {
@@ -25,25 +26,38 @@
             }
 
             body {
-                font-family: 'Plus Jakarta Sans', sans-serif;
-                line-height: 1.6;
-                max-width: 1000px;
+                font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+                line-height: 1.7;
+                max-width: 1100px;
                 margin: 0 auto;
-                padding: 2rem;
+                padding: 3rem 2rem;
                 background-color: var(--bg-secondary);
                 color: var(--text-primary);
-                font-size: 0.95rem;
+                font-size: 1rem;
+                letter-spacing: -0.01em;
             }
 
             .header {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin-bottom: 3rem;
-                padding: 2rem;
+                margin-bottom: 4rem;
+                padding: 3rem;
                 background: var(--bg-primary);
-                border-radius: 1rem;
-                box-shadow: var(--shadow-md);
+                border-radius: 1.5rem;
+                box-shadow: var(--shadow-lg);
+                position: relative;
+                overflow: hidden;
+            }
+
+            .header::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+                background: var(--gradient-primary);
             }
 
             .header-left {
@@ -51,64 +65,71 @@
             }
 
             .name {
-                font-size: 2.2rem;
-                font-weight: 600;
+                font-size: 2.5rem;
+                font-weight: 700;
                 margin: 0;
-                background: linear-gradient(120deg, var(--primary-color), #4f46e5);
+                background: var(--gradient-primary);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                letter-spacing: -0.03em;
             }
 
             .title {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
                 color: var(--text-secondary);
-                margin: 0.5rem 0;
+                margin: 0.7rem 0;
+                font-weight: 500;
             }
 
             .profile-img {
-                width: 150px;
-                height: 150px;
-                border-radius: 1rem;
+                width: 180px;
+                height: 180px;
+                border-radius: 1.5rem;
                 object-fit: cover;
-                margin-left: 2rem;
+                margin-left: 3rem;
                 box-shadow: var(--shadow-lg);
-                transition: transform 0.3s ease;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                border: 4px solid var(--bg-primary);
             }
 
             .profile-img:hover {
-                transform: scale(1.05);
+                transform: scale(1.05) rotate(2deg);
             }
 
             .about {
-                font-size: 1rem;
+                font-size: 1.05rem;
                 color: var(--text-primary);
                 background: var(--bg-primary);
-                border-radius: 1rem;
-                padding: 2rem;
-                margin-bottom: 3rem;
-                box-shadow: var(--shadow-md);
-                line-height: 1.7;
+                border-radius: 1.5rem;
+                padding: 3rem;
+                margin-bottom: 4rem;
+                box-shadow: var(--shadow-lg);
+                line-height: 1.8;
                 text-align: justify;
+                position: relative;
             }
 
             .about a {
                 color: var(--primary-color);
                 text-decoration: none;
-                font-weight: 500;
-                transition: color 0.2s ease;
+                font-weight: 600;
+                transition: all 0.2s ease;
+                padding-bottom: 1px;
+                border-bottom: 2px solid transparent;
             }
 
             .about a:hover {
-                color: #1d4ed8;
+                border-bottom: 2px solid var(--primary-color);
             }
 
             h1 {
-                font-size: 1.8rem;
-                font-weight: 600;
-                margin: 2.5rem 0 1.5rem;
+                font-size: 2rem;
+                font-weight: 700;
+                margin: 3rem 0 2rem;
                 color: var(--text-primary);
                 position: relative;
-                padding-bottom: 0.5rem;
+                padding-bottom: 0.7rem;
+                letter-spacing: -0.02em;
             }
 
             h1::after {
@@ -116,59 +137,68 @@
                 position: absolute;
                 bottom: 0;
                 left: 0;
-                width: 60px;
-                height: 4px;
-                background: var(--primary-color);
-                border-radius: 2px;
+                width: 70px;
+                height: 5px;
+                background: var(--gradient-primary);
+                border-radius: 3px;
             }
 
             .selected-publications-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 1.5rem;
-                margin-bottom: 3rem;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 2rem;
+                margin-bottom: 4rem;
             }
 
             .selected-publication-card {
                 background: var(--bg-primary);
-                border-radius: 1rem;
+                border-radius: 1.2rem;
                 overflow: hidden;
-                box-shadow: var(--shadow-md);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                box-shadow: var(--shadow-lg);
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                border: 1px solid rgba(0,0,0,0.05);
             }
 
             .selected-publication-card:hover {
-                transform: translateY(-5px);
-                box-shadow: var(--shadow-lg);
+                transform: translateY(-8px);
+                box-shadow: var(--shadow-lg), 0 25px 50px -12px rgba(0,0,0,0.1);
             }
 
             .selected-publication-card img {
                 width: 100%;
-                height: 180px;
-                object-fit: contain;
+                height: 200px;
+                object-fit: cover;
                 background: #f8f8f8;
-                padding: 10px;
+                padding: 1rem;
+                transition: all 0.3s ease;
+            }
+
+            .selected-publication-card:hover img {
+                transform: scale(1.05);
             }
 
             .selected-publication-card p {
-                padding: 1rem;
-                font-size: 0.95rem;
+                padding: 1.5rem;
+                font-size: 1rem;
                 color: var(--text-primary);
+                font-weight: 500;
             }
 
             .entry {
                 background: var(--bg-primary);
-                border-radius: 1rem;
-                padding: 1.5rem;
-                margin-bottom: 1.5rem;
-                box-shadow: var(--shadow-md);
+                border-radius: 1.2rem;
+                padding: 2rem;
+                margin-bottom: 2rem;
+                box-shadow: var(--shadow-lg);
                 display: flex;
-                gap: 2rem;
-                transition: transform 0.3s ease;
+                gap: 3rem;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                border: 1px solid rgba(0,0,0,0.05);
             }
 
             .entry:hover {
-                transform: translateX(5px);
+                transform: translateX(8px);
+                box-shadow: var(--shadow-lg), 0 20px 40px -12px rgba(0,0,0,0.1);
             }
 
             .entry-content {
@@ -176,31 +206,33 @@
             }
 
             .entry-title {
-                font-size: 1.15rem;
-                font-weight: 600;
+                font-size: 1.25rem;
+                font-weight: 700;
                 color: var(--text-primary);
-                margin-bottom: 1rem;
+                margin-bottom: 1.2rem;
+                line-height: 1.4;
             }
 
             .author, .year, .journal {
                 color: var(--text-secondary);
-                margin-bottom: 0.5rem;
-                font-size: 0.95rem;
+                margin-bottom: 0.7rem;
+                font-size: 1rem;
             }
 
             .links {
                 display: flex;
                 gap: 1rem;
-                margin-top: 1rem;
+                margin-top: 1.5rem;
+                flex-wrap: wrap;
             }
 
             .links a, .cite-button {
-                padding: 0.4rem 0.9rem;
-                border-radius: 0.5rem;
+                padding: 0.6rem 1.2rem;
+                border-radius: 0.8rem;
                 text-decoration: none;
-                font-weight: 500;
-                transition: all 0.2s ease;
-                font-size: 0.9rem;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                font-size: 0.95rem;
             }
 
             .links a {
@@ -210,62 +242,85 @@
 
             .links a:hover {
                 background: #c7d2fe;
+                transform: translateY(-2px);
             }
 
             .cite-button {
-                background: var(--primary-color);
+                background: var(--gradient-primary);
                 color: white;
                 border: none;
                 cursor: pointer;
             }
 
             .cite-button:hover {
-                background: #1d4ed8;
+                opacity: 0.9;
+                transform: translateY(-2px);
             }
 
             .citation-text {
-                margin-top: 1rem;
-                padding: 1rem;
+                margin-top: 1.5rem;
+                padding: 1.5rem;
                 background: var(--bg-secondary);
-                border-radius: 0.5rem;
-                font-family: monospace;
-                font-size: 0.85rem;
+                border-radius: 1rem;
+                font-family: 'SF Mono', Consolas, Monaco, monospace;
+                font-size: 0.9rem;
                 display: none;
+                border: 1px solid rgba(0,0,0,0.1);
             }
 
             .preview img {
-                max-width: 250px;
-                border-radius: 0.5rem;
-                box-shadow: var(--shadow-sm);
+                max-width: 280px;
+                border-radius: 1rem;
+                box-shadow: var(--shadow-md);
+                transition: all 0.3s ease;
+            }
+
+            .preview img:hover {
+                transform: scale(1.05);
             }
 
             .footer {
-                margin-top: 4rem;
-                padding: 2rem;
+                margin-top: 5rem;
+                padding: 3rem;
                 background: var(--bg-primary);
-                border-radius: 1rem;
-                box-shadow: var(--shadow-md);
+                border-radius: 1.5rem;
+                box-shadow: var(--shadow-lg);
                 text-align: center;
                 color: var(--text-secondary);
-                font-size: 0.9rem;
+                font-size: 0.95rem;
+                position: relative;
+            }
+
+            .footer::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+                background: var(--gradient-primary);
+                border-bottom-left-radius: 1.5rem;
+                border-bottom-right-radius: 1.5rem;
             }
 
             @media (max-width: 768px) {
                 body {
-                    padding: 1rem;
+                    padding: 1.5rem;
                 }
 
                 .header {
                     flex-direction: column;
                     text-align: center;
+                    padding: 2rem;
                 }
 
                 .profile-img {
-                    margin: 1rem 0 0 0;
+                    margin: 2rem 0 0 0;
                 }
 
                 .entry {
                     flex-direction: column;
+                    gap: 1.5rem;
                 }
 
                 .preview img {
@@ -273,13 +328,46 @@
                 }
 
                 .links {
-                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                .name {
+                    font-size: 2rem;
+                }
+            }
+
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --bg-primary: #1a1a1a;
+                    --bg-secondary: #111111;
+                    --text-primary: #ffffff;
+                    --text-secondary: #a0a0a0;
+                }
+
+                .links a {
+                    background: rgba(37, 99, 235, 0.2);
+                }
+
+                .links a:hover {
+                    background: rgba(37, 99, 235, 0.3);
+                }
+
+                .citation-text {
+                    background: rgba(255, 255, 255, 0.05);
                 }
             }
         </style>
         <script>
             function toggleCitation(id) {
                 const citationElement = document.getElementById(id);
+                const allCitations = document.querySelectorAll('.citation-text');
+                
+                allCitations.forEach(citation => {
+                    if (citation.id !== id) {
+                        citation.style.display = "none";
+                    }
+                });
+
                 if (citationElement.style.display === "none" || citationElement.style.display === "") {
                     citationElement.style.display = "block";
                 } else {
@@ -1514,7 +1602,7 @@
         
 
         <div class="footer">
-            <p>Last updated: December 21, 2024</p>
+            <p>Last updated: December 22, 2024</p>
             <p>This website was generated with the assistance of Large Language Models.</p>
             <p>© 2024 Alexander Kolesnikov.</p>
         </div>
